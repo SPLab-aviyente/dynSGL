@@ -1,4 +1,5 @@
 import networkx as nx
+import numpy as np
 
 def gen_er_graph(n_nodes, edge_prob, seed=None, max_iter=100):
     """Generate an Erdos-Renyi graph whose connectedness is guaranteed. 
@@ -80,3 +81,9 @@ def gen_ba_graph(n_nodes, n_edges, seed=None, max_iter=100):
                              "please increase number of edges to be attached."))
     
     return G
+
+def assign_signs(G, fraction, seed=None):
+    rng = np.random.default_rng(seed=seed)
+    nx.set_edge_attributes(
+        G, {e: -1 if rng.binomial(1, fraction) else 1 for e in G.edges}, "sign"
+    )
