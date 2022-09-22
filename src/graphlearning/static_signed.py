@@ -99,26 +99,31 @@ def _signed_graph(z, P, alpha1, alpha2, rho=10, max_iter=10000):
 def _density(w):
     return np.count_nonzero(w)/len(w)
 
-def learn_a_static_signed_graph(X, assoc_func, density_pos, density_neg, **kwargs):
+def learn_a_static_signed_graph(X, density_pos, density_neg, **kwargs):
     
     n_nodes, n_signals = X.shape
     S = rowsum_mat(n_nodes)
 
     # Data preparation: Get 2k-S^Td
-    k, d = assoc_func(X)
+    K = X@X.T
+    k = K[np.triu_indices_from(K, k=1)]
+    d = K[np.diag_indices_from(K)]
     data_vec = 2*k - S.T@d
     if np.ndim(data_vec) == 1:
         data_vec = data_vec[:, None]
+    data_vec /= np.max(np.abs(data_vec))
 
-    alpha_pos = kwargs["alpha_pos"] if "alpha_pos" in kwargs else 1
-    alpha_neg = kwargs["alpha_neg"] if "alpha_neg" in kwargs else 1
-    rho = kwargs["rho"] if "rho" in kwargs else 10
-    max_iter = kwargs["max_iter"] if "max_iter" in kwargs else 100
+    alpha_pos = kwargs["alpha_pos"] if "alpha_pos" in kwargs else .1
+    alpha_neg = kwargs["alpha_neg"] if "alpha_neg" in kwargs else .1
+    rho = kwargs["rho"] if "rho" in kwargs else 1
+    max_iter = kwargs["max_iter"] if "max_iter" in kwargs else 1000
 
     if density_pos == 0:
         alpha_pos = 0
     if density_neg == 0:
         alpha_neg = 0
+    
+    rng = np.random.default_rng()
     
     iter = 0
     while True:
@@ -134,8 +139,8 @@ def learn_a_static_signed_graph(X, assoc_func, density_pos, density_neg, **kwarg
         obtained_density_neg = _density(w_neg)
 
         # Update parameters
-        update_alpha_pos = abs(obtained_density_pos - density_pos) > 1e-2
-        update_alpha_neg = abs(obtained_density_neg - density_neg) > 1e-2
+        update_alpha_pos = abs(obtained_density_pos - density_pos) > 2.5e-2
+        update_alpha_neg = abs(obtained_density_neg - density_neg) > 2.5e-2
 
         if density_pos == 0:
             update_alpha_pos = False
@@ -143,18 +148,20 @@ def learn_a_static_signed_graph(X, assoc_func, density_pos, density_neg, **kwarg
             update_alpha_neg = False
 
         if update_alpha_pos:
+            rnd = rng.uniform(0.8, 1.0)
             diff = obtained_density_pos - density_pos
             if diff > 0:
-                alpha_pos = max(alpha_pos - 2*abs(diff), alpha_pos*0.7) 
+                alpha_pos = max(alpha_pos - 2*abs(diff), alpha_pos*(1-rnd*0.3)) 
             else:
-                alpha_pos = min(alpha_pos + 2*abs(diff), alpha_pos*1.3)
+                alpha_pos = min(alpha_pos + 2*abs(diff), alpha_pos*(1+rnd*0.3))
 
         if update_alpha_neg:
+            rnd = rng.uniform(0.8, 1.0)
             diff = obtained_density_neg - density_neg
             if diff > 0:
-                alpha_neg = max(alpha_neg - 2*abs(diff), alpha_pos*0.7) 
+                alpha_neg = max(alpha_neg - 2*abs(diff), alpha_neg*(1-rnd*0.3)) 
             else:
-                alpha_neg = min(alpha_neg + 2*abs(diff), alpha_neg*1.3)
+                alpha_neg = min(alpha_neg + 2*abs(diff), alpha_neg*(1+rnd*0.3))
 
         if (not update_alpha_pos) and (not update_alpha_neg):
             break
