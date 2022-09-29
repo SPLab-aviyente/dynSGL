@@ -1,4 +1,7 @@
 test.py
+data/
+hpccjobs/
+notebooks/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
