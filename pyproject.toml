@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dynsgl"
+version = "0.1.0"
+description = "Dynamic signed graph learning from temporal graph signals"
+authors = ["abdkarr <7543956+abdkarr@users.noreply.github.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+networkx = "^3.3"
+numpy = "<2.1.0" # Pinned for numba
+numba = "^0.60.0"
+pandas = "^2.2.2"
+scikit-learn = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

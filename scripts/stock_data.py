@@ -6,8 +6,7 @@ import numpy as np
 
 from sklearn import preprocessing
 
-import project_path
-from src import graphlearning
+from dynsgl import graphlearning
 
 PROJECT_DIR = Path(__file__).parents[1]
 INPUT_DIR = Path(PROJECT_DIR, "data", "inputs")
@@ -22,7 +21,7 @@ data = data["Adj Close"]
 data.index = pd.to_datetime(data.index)
 
 # Calculate returns and split quarterly
-day_returns = np.log1p(data.pct_change()).dropna(axis=0, how="all").dropna(axis=1, how="any")
+day_returns = np.log1p(data.pct_change(fill_method=None)).dropna(axis=0, how="all").dropna(axis=1, how="any")
 day_returns = day_returns["2020-01-01":"2021-01-01"]
 
 name = "covid"
@@ -41,9 +40,9 @@ for i in range(0, len(day_returns)-w+1, s):
 desired_density = 0.1
 desired_similarity = 0.9
 
-v, _ = graphlearning.learn_a_dynamic_signed_graph(day_returns_split, 
-                                                  desired_density, 
-                                                  desired_similarity)
+v, _ = graphlearning.learn_a_dynamic_signed_graph(
+    day_returns_split, 0.1, 0.1, 0.01, 0.01, desired_density, desired_similarity
+)
 
 # Save
 learned_graph = {

@@ -12,9 +12,8 @@ import pandas as pd
 from sklearn.metrics import f1_score
 from sklearn import preprocessing
 
-import project_path
-from src import data
-from src import graphlearning
+from dynsgl import data
+from dynsgl import graphlearning
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
@@ -50,7 +49,7 @@ perturbation = float(args.perturbation)
 desired_density = 0.1
 desired_similarity = 0.75
 
-n_runs = 20
+n_runs = 1
 
 # output
 results = {}
@@ -93,12 +92,9 @@ for r in range(n_runs):
 
         w_gt.append(nx.to_numpy_array(Gt, weight="sign")[np.triu_indices(n_nodes, k=1)])
 
-    if r == 0:
-        v, params_dyn = graphlearning.learn_a_dynamic_signed_graph(Xv, desired_density, desired_similarity)
-    else: 
-        v, _ = graphlearning.learn_a_dynamic_signed_graph(Xv, desired_density, desired_similarity, 
-                                                          alpha=params_dyn["alpha"],
-                                                          beta=params_dyn["beta"])
+    v, _ =  graphlearning.learn_a_dynamic_signed_graph(
+        Xv, 0.1, 0.1, 0.01, 0.01, desired_density, desired_similarity
+    )
 
     f1 = 0
     recon_error = 0
@@ -123,6 +119,10 @@ for r in range(n_runs):
     results["dynSGL"]["ReconError"].append(recon_error)
 
     # DYNAMIC UNSIGNED RESULTS
+    v, _ =  graphlearning.learn_a_dynamic_signed_graph(
+        Xv, 0.1, 0, 0.01, 0, desired_density, desired_similarity
+    )
+
     f1 = 0
     recon_error = 0
     for t in range(n_times):

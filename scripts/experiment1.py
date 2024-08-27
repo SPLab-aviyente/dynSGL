@@ -12,9 +12,8 @@ import pandas as pd
 from sklearn.metrics import f1_score
 from sklearn import preprocessing
 
-import project_path
-from src import data
-from src import graphlearning
+from dynsgl import data
+from dynsgl import graphlearning
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
@@ -24,7 +23,7 @@ def calc_recon_error(w_gt, w_hat):
 parser = argparse.ArgumentParser()
 parser.add_argument("--graphmodel", dest="graph_model", default=None,
                     help="Graph model to use to generate the data")
-parser.add_argument("--nsignals", dest="n_signals", default=10,
+parser.add_argument("--nsignals", dest="n_signals", default=100,
                     help="Number of signals in each time window")
 args = parser.parse_args()
 
@@ -50,7 +49,7 @@ perturbation = 0.1
 desired_density = 0.1
 desired_similarity = 0.75
 
-n_runs = 20
+n_runs = 1
 
 # output
 results = {}
@@ -95,12 +94,9 @@ for r in range(n_runs):
 
         G = Gt
 
-    if r == 0:
-        v, params_dyn = graphlearning.learn_a_dynamic_signed_graph(Xv, desired_density, desired_similarity)
-    else: 
-        v, _ = graphlearning.learn_a_dynamic_signed_graph(Xv, desired_density, desired_similarity, 
-                                                          alpha=params_dyn["alpha"],
-                                                          beta=params_dyn["beta"])
+    v, _ =  graphlearning.learn_a_dynamic_signed_graph(
+        Xv, 0.1, 0.1, 0.01, 0.01, desired_density, desired_similarity
+    )
 
     f1 = 0
     recon_error = 0
@@ -125,6 +121,10 @@ for r in range(n_runs):
     results["dynSGL"]["ReconError"].append(recon_error)
 
     # DYNAMIC UNSIGNED RESULTS
+    v, _ =  graphlearning.learn_a_dynamic_signed_graph(
+        Xv, 0.1, 0, 0.01, 0, desired_density*2, desired_similarity
+    )
+
     f1 = 0
     recon_error = 0
     for t in range(n_times):
