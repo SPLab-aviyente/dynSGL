@@ -3,3 +3,4 @@ numba==0.56.2
 numpy==1.23.3
 scipy==1.9.1
 scikit_learn==1.1.2
+pandas

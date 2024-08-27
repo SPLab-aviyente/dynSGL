@@ -152,8 +152,8 @@ def learn_a_dynamic_signed_graph(X, density, similarity, **kwargs):
     if "beta" in kwargs:
         beta = kwargs["beta"]
     else:
-        beta = {"+": 0.1*np.ones(n_times-1), 
-                "-": 0.1*np.ones(n_times-1)}
+        beta = {"+": 0.01*np.ones(n_times-1), 
+                "-": 0.01*np.ones(n_times-1)}
 
     rho = kwargs["rho"] if "rho" in kwargs else 10
     max_iter = kwargs["max_iter"] if "max_iter" in kwargs else 1000

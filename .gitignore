@@ -1,7 +1,8 @@
-test.py
-data/
-hpccjobs/
-notebooks/
+.DS_Store
+/data/outputs/
+/figures/
+/hpccjobs/
+/notebooks/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

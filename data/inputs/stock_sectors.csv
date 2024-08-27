@@ -1,0 +1,104 @@
+Ticker,Company,Sector,Market Cap,PE Ratio,EPS
+CPRT,"Copart, Inc.",Commercial Services,"$                               34,854,843,266",37,4.2
+TMUS,"T-Mobile US, Inc.",Communications,"$                             142,929,192,342",43,2.7
+TSLA,"Tesla, Inc.",Consumer Durables,"$                         1,204,896,966,221",342,3.5
+ATVI,"Activision Blizzard, Inc",Consumer Durables,"$                               52,512,665,065",20,3.4
+EA,Electronic Arts Inc.,Consumer Durables,"$                               38,164,960,304",49,2.7
+PEP,"PepsiCo, Inc.",Consumer Non-Durables,"$                             239,171,317,244",30,5.9
+MDLZ,"Mondelez International, Inc.",Consumer Non-Durables,"$                               92,026,310,532",21,3.2
+KDP,Keurig Dr Pepper Inc.,Consumer Non-Durables,"$                               52,053,373,765",30,1.2
+MNST,Monster Beverage Corporation,Consumer Non-Durables,"$                               51,083,089,116",34,2.9
+KHC,The Kraft Heinz Company,Consumer Non-Durables,"$                               44,236,897,125",19,1.9
+CMCSA,Comcast Corporation,Consumer Services,"$                             231,827,155,904",16,3.2
+SBUX,Starbucks Corporation,Consumer Services,"$                             136,888,971,732",33,3.6
+CHTR,"Charter Communications, Inc.",Consumer Services,"$                             116,105,310,853",30,22.7
+ABNB,"Airbnb, Inc.",Consumer Services,"$                             109,718,965,373",,-7.2
+BKNG,Booking Holdings Inc. Common Stock,Consumer Services,"$                             101,074,480,437",262,9.3
+MAR,Marriott International,Consumer Services,"$                               53,382,719,592",117,1.4
+CTAS,Cintas Corporation,Consumer Services,"$                               43,963,052,140",41,11.0
+SIRI,Sirius XM Holdings Inc.,Consumer Services,"$                               25,436,779,247",80,0.1
+PTON,"Peloton Interactive, Inc.",Consumer Services,"$                               11,622,972,098",,-2.1
+FAST,Fastenal Company,Distribution Services,"$                               35,648,625,623",42,1.5
+AAPL,Apple Inc.,Electronic Technology,"$                         2,986,128,347,290",32,5.7
+NVDA,NVIDIA Corporation,Electronic Technology,"$                             753,024,962,495",91,3.3
+ASML,ASML Holding N.V. – New York Registry Shares,Electronic Technology,"$                             324,109,615,991",51,15.8
+AVGO,Broadcom Inc.,Electronic Technology,"$                             273,867,545,687",44,15.7
+INTC,Intel Corporation,Electronic Technology,"$                             216,405,070,000",10,5.2
+QCOM,QUALCOMM Incorporated,Electronic Technology,"$                             208,555,194,431",23,8.0
+AMD,"Advanced Micro Devices, Inc.",Electronic Technology,"$                             181,431,389,863",45,3.3
+TXN,Texas Instruments Incorporated,Electronic Technology,"$                             176,024,068,560",24,7.9
+MU,"Micron Technology, Inc.",Electronic Technology,"$                             107,256,260,088",14,6.6
+LRCX,Lam Research Corporation,Electronic Technology,"$                             102,143,832,762",24,29.9
+ADI,"Analog Devices, Inc.",Electronic Technology,"$                               93,062,333,726",48,3.7
+MRVL,"Marvell Technology, Inc.",Electronic Technology,"$                               75,461,031,065",,-0.5
+KLAC,KLA Corporation,Electronic Technology,"$                               65,969,290,798",24,17.8
+NXPI,NXP Semiconductors N.V.,Electronic Technology,"$                               61,489,087,599",40,5.8
+XLNX,"Xilinx, Inc.",Electronic Technology,"$                               54,848,499,525",66,3.2
+FTNT,"Fortinet, Inc.",Electronic Technology,"$                               54,465,052,996",108,3.4
+PANW,"Palo Alto Networks, Inc.",Electronic Technology,"$                               53,695,240,905",,-5.3
+MCHP,Microchip Technology Incorporated,Electronic Technology,"$                               48,828,617,283",76,1.2
+SWKS,"Skyworks Solutions, Inc.",Electronic Technology,"$                               26,425,575,150",17,9.1
+ISRG,"Intuitive Surgical, Inc.",Health Technology,"$                             128,509,998,076",78,4.8
+AMGN,Amgen Inc.,Health Technology,"$                             127,686,740,568",23,9.8
+MRNA,"Moderna, Inc.",Health Technology,"$                               95,300,908,995",16,17.5
+GILD,"Gilead Sciences, Inc.",Health Technology,"$                               91,043,158,455",12,5.9
+REGN,"Regeneron Pharmaceuticals, Inc.",Health Technology,"$                               67,456,336,485",10,66.4
+ILMN,"Illumina, Inc.",Health Technology,"$                               59,529,982,545",63,6.1
+VRTX,Vertex Pharmaceuticals Incorporated,Health Technology,"$                               56,578,685,306",26,8.4
+IDXX,"IDEXX Laboratories, Inc.",Health Technology,"$                               53,505,617,391",75,8.9
+ALGN,"Align Technology, Inc.",Health Technology,"$                               51,100,733,466",71,9.4
+DXCM,"DexCom, Inc.",Health Technology,"$                               50,476,023,895",104,5.5
+BIIB,Biogen Inc.,Health Technology,"$                               35,862,387,277",23,10.2
+SGEN,Seagen Inc.,Health Technology,"$                               28,863,789,871",,-1.8
+HON,Honeywell International Inc.,Producer Manufacturing,"$                             142,365,867,197",27,7.9
+AMAT,"Applied Materials, Inc.",Producer Manufacturing,"$                             142,099,923,765",25,6.5
+PCAR,PACCAR Inc.,Producer Manufacturing,"$                               30,718,248,878",18,5.0
+AMZN,"Amazon.com, Inc.",Retail Trade,"$                         1,728,404,755,739",65,52.1
+COST,Costco Wholesale Corporation,Retail Trade,"$                             251,297,634,711",49,11.7
+JD,"JD.com, Inc.",Retail Trade,"$                             107,784,304,943",29,2.5
+PDD,Pinduoduo Inc.,Retail Trade,"$                               73,066,736,142",,0.0
+MELI,"MercadoLibre, Inc.",Retail Trade,"$                               67,258,764,257",847,1.6
+LULU,lululemon athletica inc.,Retail Trade,"$                               50,109,147,088",59,6.7
+ORLY,"O’Reilly Automotive, Inc.",Retail Trade,"$                               46,891,318,976",24,29.1
+WBA,"Walgreens Boots Alliance, Inc.",Retail Trade,"$                               45,840,915,477",18,2.9
+EBAY,eBay Inc.,Retail Trade,"$                               41,817,048,706",4,18.5
+ROST,"Ross Stores, Inc.",Retail Trade,"$                               39,982,793,227",25,4.5
+DLTR,"Dollar Tree, Inc.",Retail Trade,"$                               31,757,049,360",24,5.9
+MSFT,Microsoft Corporation,Technology Services,"$                         2,513,296,516,647",38,9.0
+GOOG,Alphabet Inc.,Technology Services,"$                         1,927,101,773,229",28,105.3
+GOOGL,Alphabet Inc.,Technology Services,"$                         1,923,705,624,040",28,105.3
+FB,"Meta Platforms, Inc.",Technology Services,"$                             941,736,878,230",24,14.2
+CSCO,"Cisco Systems, Inc.",Technology Services,"$                             266,384,018,596",24,2.7
+NFLX,"Netflix, Inc.",Technology Services,"$                             264,606,344,215",54,11.4
+PYPL,"PayPal Holdings, Inc.",Technology Services,"$                             229,040,890,691",45,4.2
+INTU,Intuit Inc.,Technology Services,"$                             178,812,338,876",85,7.7
+ADP,"Automatic Data Processing, Inc.",Technology Services,"$                             102,821,918,706",39,6.4
+TEAM,Atlassian Corporation Plc,Technology Services,"$                               88,569,296,384",,-4.3
+FISV,"Fiserv, Inc.",Technology Services,"$                               71,054,161,320",54,2.0
+WDAY,"Workday, Inc.",Technology Services,"$                               65,929,998,232",18711,0.1
+ADSK,"Autodesk, Inc.",Technology Services,"$                               62,410,859,034",47,6.0
+NTES,"NetEase, Inc.",Technology Services,"$                               61,776,105,540",37,2.8
+SNPS,"Synopsys, Inc.",Technology Services,"$                               55,406,584,298",76,5.0
+ZM,"Zoom Video Communications, Inc.",Technology Services,"$                               54,908,479,984",49,3.9
+BIDU,"Baidu, Inc.",Technology Services,"$                               52,675,045,227",25,6.5
+DDOG,"Datadog, Inc.",Technology Services,"$                               51,117,640,750",,-0.1
+CDNS,"Cadence Design Systems, Inc.",Technology Services,"$                               50,761,145,613",75,2.5
+PAYX,"Paychex, Inc.",Technology Services,"$                               48,525,422,527",39,3.5
+CTSH,Cognizant Technology Solutions Corporation,Technology Services,"$                               47,046,801,688",25,3.6
+CRWD,"CrowdStrike Holdings, Inc.",Technology Services,"$                               45,493,578,956",,-0.9
+ZS,"Zscaler, Inc.",Technology Services,"$                               42,280,847,192",,-2.2
+MTCH,"Match Group, Inc.",Technology Services,"$                               37,998,543,463",68,2.2
+VRSK,"Verisk Analytics, Inc.",Technology Services,"$                               35,723,030,148",53,4.3
+OKTA,"Okta, Inc.",Technology Services,"$                               34,633,355,138",,-4.7
+ANSS,"ANSYS, Inc.",Technology Services,"$                               34,507,669,794",75,5.4
+DOCU,"DocuSign, Inc.",Technology Services,"$                               31,068,590,434",,-0.6
+VRSN,"VeriSign, Inc.",Technology Services,"$                               28,003,985,763",47,5.4
+SPLK,Splunk Inc.,Technology Services,"$                               18,571,747,647",,-8.2
+CSX,CSX Corporation,Transportation,"$                               82,242,821,077",24,1.6
+EXC,Exelon Corporation,Utilities,"$                               55,832,595,798",34,1.7
+AEP,"American Electric Power Company, Inc.",Utilities,"$                               44,628,575,300",19,4.8
+XEL,Xcel Energy Inc.,Utilities,"$                               36,597,614,341",23,2.9
+ADBE,ADOBE INC Inc.,Technology Services,"$                               36,597,614,341",23,2.9
+INCY,INCYTE CORPORATION,Health Technology,"$                               36,597,614,341",23,2.9
+CHKP,CHECK POINT SOFTWARE TECHNOLOGIES LTD,Technology Services,"$                               36,597,614,341",23,2.9
+CDW,CDW CORPORATION,Technology Services,"$                               36,597,614,341",23,2.9
